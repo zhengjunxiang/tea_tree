@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/field/field",
+    "pages/diary/diary",
+    "pages/personal/personal"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -19,10 +21,20 @@
       "selectedIconPath": "image/icon_component_HL.png",
       "text": "首页"
     }, {
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/field/field",
+      "iconPath": "image/icon_component.png",
+      "selectedIconPath": "image/icon_component_HL.png",
+      "text": "认养田地"
+    }, {
+      "pagePath": "pages/diary/diary",
+      "iconPath": "image/icon_component.png",
+      "selectedIconPath": "image/icon_component_HL.png",
+      "text": "水稻日记"
+    }, {
+      "pagePath": "pages/personal/personal",
       "iconPath": "image/icon_API.png",
       "selectedIconPath": "image/icon_API_HL.png",
-      "text": "日志"
+      "text": "个人中心"
     }]
   },
   "usingComponents": {},

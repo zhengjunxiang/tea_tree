@@ -1,0 +1,8 @@
+<view class="field" bind:tap="pageTapClick">
+  <canvas type="2d" id="myCanvas" canvas-id="myCanvas"></canvas>
+  <view id="maskGrey" class="mask_grey"></view>
+  <image id="box" src="/image/bg.jpg" class="img_bg" />
+  <image wx:for="{{fields}}" id="{{item.id}}" src="{{item.path}}" class="field_item"
+    style="width: {{item.width}}rpx; height: {{item.height}}rpx; left: {{item.left}}rpx; top: {{item.top}}rpx"
+    />
+</view>
