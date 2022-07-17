@@ -6,39 +6,21 @@ Page({
     fields: [
       {
         path: "/image/tiandi01.png",
-        width: 100,
-        height: 150,
-        left: 100,
-        top: 100,
-        id: 1
+        width: 100, height: 150, left: 100, top: 100, id: 1
       },
       {
         path: "/image/tiandi02.png",
-        width: 100,
-        height: 150,
-        left: 156,
-        top: 87,
-        id: 2
+        width: 100, height: 150, left: 156, top: 87, id: 2
       },
       {
         path: "/image/tea01.png",
-        width: 100,
-        height: 100,
-        left: 100,
-        top: 300,
-        id: 3
+        width: 100, height: 100, left: 100, top: 300, id: 3
       },
       {
         path: "/image/tea02.png",
-        width: 100,
-        height: 100,
-        left: 201,
-        top: 300,
-        id: 3
+        width: 100, height: 100, left: 201, top: 300, id: 4
       }
     ]
-  },
-  onReady() {
   },
   onLoad() {
     this.setData({
@@ -46,9 +28,10 @@ Page({
     });
   },
   pageTapClick(event) {
-    this.setData({
-      selectedField: null
-    });
+    this.setData({ selectedField: null });
+    wx.setPageStyle({
+      style: { overflow: "unset" }
+   })
     // 获取点击位置相对于页面的位置
     const pageX = Math.round(this.data.rateW * event.touches[0].pageX);
     const pageY = Math.round(this.data.rateW * event.touches[0].pageY);
@@ -104,6 +87,9 @@ Page({
     })
   },
   dealField(selectedField) {
-    console.log("selectedField", selectedField)
+    this.setData({ selectedField })
+    wx.setPageStyle({
+      style: { overflow: 'hidden' }
+   })
   }
 })
